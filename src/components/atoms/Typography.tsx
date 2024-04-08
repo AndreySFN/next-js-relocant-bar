@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {CLR_BLACK} from "@src/constants";
+import {CLR_BLACK} from "@/constants";
 
 export interface ITypographyProps {
     size?: number
