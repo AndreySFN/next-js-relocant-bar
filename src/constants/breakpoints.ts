@@ -1,3 +1,4 @@
 export enum Breakpoints {
-    MAIN = '@media (max-width: 920px)'
+    TABLET = '@media (max-width: 920px)',
+    MOBILE = '@media (max-width: 414px)'
 }

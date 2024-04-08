@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import {ReactNode} from "react";
-import {CLR_WHITE} from "@src/constants";
-import {Typography} from "@components/atoms/Typography.tsx";
-import {useScreenWidth} from "@src/utils";
+import {CLR_WHITE} from "@/constants";
+import {Typography} from "@/components/atoms/Typography";
 
 const BORDER_RADIUS = '25px'
 
@@ -38,8 +37,9 @@ interface IFeatureCardProps extends IContainerProps {
     subtitle?: string | ReactNode
 }
 
+const Title = styled(Typography)
+
 export const FeatureCard = ({imgSrc, width = '100%', title, subtitle}: IFeatureCardProps) => {
-    const screenWidth = useScreenWidth()
     const titleSize = screenWidth > 414 ? 32 : 23
     const subTitleSize = screenWidth > 414 ? 26 : 18
     return <Container imgSrc={imgSrc} height={'300px'} width={width}>

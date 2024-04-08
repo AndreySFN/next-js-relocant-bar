@@ -1,7 +1,7 @@
-import {Typography} from "@components/atoms/Typography.tsx";
-import {CLR_WHITE} from "@src/constants";
+import { Breakpoints } from "@/constants/breakpoints";
+import {CLR_WHITE} from "../../constants";
 import styled from "styled-components";
-import {useMobile} from "@src/utils";
+import { Typography } from "./Typography";
 
 export interface IDishMenuElementProps {
     name: string;
@@ -9,14 +9,13 @@ export interface IDishMenuElementProps {
     price: number;
 }
 
-interface IDishMenuElementWrapperProps {
-    isMobile: boolean
-}
-
-const DishMenuElementWrapper = styled.div<IDishMenuElementWrapperProps>(({isMobile}: IDishMenuElementWrapperProps) => ({
-    width: isMobile ? '100%' : '40%',
-    display: 'flex'
-}))
+const DishMenuElementWrapper = styled.div({
+    width: '40%',
+    display: 'flex',
+    [Breakpoints.TABLET]: {
+        width: '100%'
+    }
+})
 
 const DishPriceWrapper = styled.div({
     display: 'flex',
@@ -33,8 +32,7 @@ const DotWrapper = styled.div`
 `;
 
 export const DishMenuElement = ({description, price, name}: IDishMenuElementProps) => {
-    const isMobile = useMobile()
-    return <DishMenuElementWrapper isMobile={isMobile}>
+    return <DishMenuElementWrapper>
         <div style={{alignSelf: 'end'}}>
             <div>
                 <Typography textAlign='center' size={32} color={CLR_WHITE}>

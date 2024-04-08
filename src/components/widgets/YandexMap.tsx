@@ -1,31 +1,34 @@
+import { Breakpoints } from "@/constants/breakpoints";
 import React from "react";
 import styled from "styled-components";
-import {IMobileProps} from "@src/types";
 
-const MapContainer = styled.div<IMobileProps>`
-  position: relative;
-  overflow: hidden;
-  width:  ${(props) => (props.isMobile ? '100%' : '49%')};
-  a {
-    color: #eee;
-    font-size: 12px;
-    position: absolute;
-    top: 0;
-    text-decoration: none;
+const MapContainer = styled.div({
+  position: 'relative',
+  overflow: 'hidden',
+  'a': {
+    color: '#eee',
+    fontSize: '12px',
+    position: 'absolute',
+    top: 0,
+    textDecoration: 'none',
+    
+    '&:last-child': {
+      top: '14px',
+    },
+  },
 
-    &:last-child {
-      top: 14px;
-    }
+  'iframe': {
+    position: 'relative',
+  },
+
+  [Breakpoints.TABLET]: {
+    width: '100%'
   }
+});
 
-  iframe {
-    position: relative;
-  }
-`;
-
-export const YandexMap: React.FC<IMobileProps> = ({isMobile}: IMobileProps) => {
+export const YandexMap: React.FC = () => {
     return (
-        <MapContainer isMobile={isMobile}>
+        <MapContainer>
             <a
                 href="https://yandex.ru/maps/org/relokant/147145053570/?utm_medium=mapframe&utm_source=maps"
                 target="_blank"
