@@ -1,0 +1,43 @@
+/*TODO: Разобраться со шрифтами*/
+@font-face {
+    font-family: 'Nautilus';
+    src: url('./assets/fonts/Nautilus.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nautilus', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+li {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+ul {
+    display: inline-block;
+}
+
+a {
+    color: white
+}
