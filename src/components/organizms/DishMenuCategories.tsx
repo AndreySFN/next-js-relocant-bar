@@ -1,8 +1,7 @@
-import styled from "styled-components";
-import {MenuCategory} from "@src/types";
-import {Link} from "react-router-dom";
-import {Typography} from "@components/atoms";
-import {CLR_WHITE} from "@src/constants";
+import {MenuCategory} from "@/types";
+import {Typography} from "@/components/atoms";
+import {CLR_WHITE} from "@/constants";
+import styled from "@/utils/styled";
 
 
 const ContentWrapper = styled.div({
@@ -19,11 +18,12 @@ export const DishMenuCategories = ({categories}: IDishMenuCategoriesProps) =>
     <ContentWrapper>
         {categories?.map(({id, category}: MenuCategory) =>
             <ContentWrapper>
-                <Link to={`/menu/${id}`}>
+                {/* TODO: Links */}
+                {/* <Link to={`/menu/${id}`}> */}
                     <Typography padding='20px 0' textAlign='center' size={32} color={CLR_WHITE}>
                         {category}
                     </Typography>
-                </Link>
+                {/* </Link> */}
             </ContentWrapper>
         )}
     </ContentWrapper>

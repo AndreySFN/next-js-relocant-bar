@@ -1,3 +1,3 @@
-export * from './Contacts.jsx'
-export * from './Features.jsx'
-export * from './LegalInformation.jsx'
+export * from './Contacts'
+export * from './Features'
+export * from './LegalInformation'

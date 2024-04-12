@@ -1,9 +1,9 @@
 import {BeerCard, EventCard, MenuCard, TinctureCard} from "@/components/molecules";
 import {BoardGamesCard} from "@/components/molecules/BoardGamesCard";
-import styled from "styled-components";
 import {Block} from "@/components/atoms";
 import {Response} from "@/types";
 import { Breakpoints } from "@/constants/breakpoints";
+import styled from "@/utils/styled";
 
 const FeaturesGrid = styled.div({
     display: 'grid',

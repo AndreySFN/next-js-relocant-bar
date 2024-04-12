@@ -1,7 +1,8 @@
-import styled from "styled-components";
 import {ReactNode} from "react";
 import {CLR_WHITE} from "@/constants";
 import {Typography} from "@/components/atoms/Typography";
+import { Breakpoints } from "@/constants/breakpoints";
+import styled from "@/utils/styled";
 
 const BORDER_RADIUS = '25px'
 
@@ -11,10 +12,10 @@ interface IContainerProps {
     height?: string | number
 }
 
-const Container = styled.div<IContainerProps>((props) => ({
-    backgroundImage: `url(${props.imgSrc})`,
+const Container = styled.div<IContainerProps>(({imgSrc, height}: IContainerProps) => ({
+    backgroundImage: `url(${imgSrc})`,
     width: '100%',
-    height: props.height,
+    height,
     borderRadius: BORDER_RADIUS,
     backgroundSize: 'cover',
     overflow: 'hidden'
@@ -37,23 +38,33 @@ interface IFeatureCardProps extends IContainerProps {
     subtitle?: string | ReactNode
 }
 
-const Title = styled(Typography)
+const Title = styled(Typography)({
+    fontSize: 32,
+    [Breakpoints.MOBILE]: {
+        fontSize: 23
+    }
+})
+
+const Subtitle = styled(Typography)({ 
+    fontSize: 26,
+    [Breakpoints.MOBILE]: {
+        fontSize: 18
+    }
+})
+
 
 export const FeatureCard = ({imgSrc, width = '100%', title, subtitle}: IFeatureCardProps) => {
-    const titleSize = screenWidth > 414 ? 32 : 23
-    const subTitleSize = screenWidth > 414 ? 26 : 18
     return <Container imgSrc={imgSrc} height={'300px'} width={width}>
         <Coverage>
-            <Typography textAlign='center' size={titleSize} color={CLR_WHITE}>{title}</Typography>
+            <Title textAlign='center' color={CLR_WHITE}>{title}</Title>
             <br/>
             {
-                subtitle && <Typography
+                subtitle && <Subtitle
                     textAlign='center'
-                    size={subTitleSize}
                     padding='0 10%'
                     color={CLR_WHITE}>
                     {subtitle}
-                </Typography>
+                </Subtitle>
             }
         </Coverage>
     </Container>

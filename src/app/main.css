@@ -1,11 +1,3 @@
-/*TODO: Разобраться со шрифтами*/
-@font-face {
-    font-family: 'Nautilus';
-    src: url('./assets/fonts/Nautilus.otf') format('otf');
-    font-weight: normal;
-    font-style: normal;
-}
-
 * {
     box-sizing: border-box;
     -moz-box-sizing: border-box;

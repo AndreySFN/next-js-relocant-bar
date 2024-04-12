@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
-import styled from "styled-components";
 import './reset.css'
 import './main.css'
-// import {HeaderBanner} from "@components/molecules";
-// import {Features} from "@components/organizms/Features.tsx";
-// import {Contacts} from "@components/organizms/Contacts.tsx";
-// import {LegalInformation} from "@components/organizms";
-// import {FeaturesList} from "@components/organizms/FeaturesList.tsx";
-import {useJson} from "../utils";
-// import {Outlet} from "react-router";
+import {HeaderBanner} from "@/components/molecules";
+import {LegalInformation} from "@/components/organizms";
+import styled from "@/utils/styled";
 
 const inter = Raleway({ subsets: ["latin"] });
 
@@ -35,22 +30,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const response = useJson()
   return (
     <html lang="en">
       <body className={inter.className}>
-      <div>ПИСЬКА</div>{children}</body>
+          <MainContainer>
+            <HeaderBanner/>
+            <Content>
+              {children}
+            </Content>
+            <LegalInformation/>
+          </MainContainer>
+          
+      </body>
     </html>
-    
-    // <MainContainer>
-    //         <HeaderBanner/>
-    //         <Content>
-    //             <FeaturesList/>
-    //             <Features response={response}/>
-    //             <Contacts/>
-    //             <LegalInformation/>
-    //             <Outlet/>
-    //         </Content>
-    //     </MainContainer>
   );
 }

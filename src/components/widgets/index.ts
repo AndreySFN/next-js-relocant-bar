@@ -1,2 +1,2 @@
-export * from './YandexMapReview.jsx'
-export * from './YandexMap.jsx'
+export * from './YandexMapReview'
+export * from './YandexMap'

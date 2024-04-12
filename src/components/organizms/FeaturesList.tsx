@@ -1,11 +1,12 @@
-import {Block} from "@components/atoms";
-import styled from "styled-components";
+import {Block} from "@/components/atoms";
+import styled from "@/utils/styled";
 
 const FeaturesBlock = styled.div({
     padding: '50px 0 0 0',
     display: 'flex',
     justifyContent: 'center'
 })
+
 export const FeaturesList = () => <Block>
     <h2>Бар от релокантов для релокантов, известный своими напитками и культурными мероприятиями</h2>
     <FeaturesBlock>

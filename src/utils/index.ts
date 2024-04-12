@@ -1,1 +1,1 @@
-export * from './useJson'
+export * from './styled'

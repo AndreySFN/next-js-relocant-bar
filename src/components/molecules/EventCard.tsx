@@ -1,6 +1,5 @@
-import {FeatureCard} from "@components/atoms";
-import url from '@assets/event.jpg'
-import {TG_CHANEL_URL} from "@src/constants";
+import {FeatureCard} from "@/components/atoms";
+import {TG_CHANEL_URL} from "@/constants";
 export const EventCard = () => <FeatureCard
     title='РЕГУЛЯРНЫЕ МЕРОПРИЯТИЯ'
     subtitle={
@@ -9,5 +8,5 @@ export const EventCard = () => <FeatureCard
             <a href={TG_CHANEL_URL}>TELEGRAM</a>
         </>
     }
-    imgSrc={url}
+    imgSrc={'/event.jpg'}
 />

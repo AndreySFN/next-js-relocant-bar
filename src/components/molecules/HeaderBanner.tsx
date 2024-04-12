@@ -1,8 +1,7 @@
-import imgUrl from '../../assets/header.jpg'
-import styled from "styled-components";
 import {Typography} from "@/components/atoms";
 import {CLR_WHITE} from "@/constants";
 import { Breakpoints } from '@/constants/breakpoints';
+import styled from '@/utils/styled';
 
 const HeaderBannerWrapper = styled.div({
     padding: '20px 5%',
@@ -13,7 +12,7 @@ const HeaderBannerWrapper = styled.div({
 })
 
 const HeaderBannerContainer = styled.div({
-    backgroundImage: `url(${imgUrl})`,
+    backgroundImage: `url('/header.jpg')`,
     height: 470,
     width: '100%',
     borderRadius: 32,
@@ -27,9 +26,11 @@ const HeaderBannerContainer = styled.div({
     }
 })
 
+// const Test = styled.div({color: 'red'})
+
 export const HeaderBanner = () => {
     return <HeaderBannerWrapper>
-        <HeaderBannerContainer>
+        <HeaderBannerContainer id='HeaderBannerContainer'>
             <Typography color={CLR_WHITE}><h1>Релокант - бар с русским акцентом</h1></Typography>
             <Typography color={CLR_WHITE}><h2>Тематические вечера, крафтовое пиво, игры и концерты.</h2></Typography>
         </HeaderBannerContainer>

@@ -1,6 +1,6 @@
-import {MenuCategory} from "@src/types";
-import {DishMenuElement} from "@components/atoms";
-import styled from "styled-components";
+import {MenuCategory} from "@/types";
+import {DishMenuElement} from "@/components/atoms";
+import styled from "@/utils/styled";
 
 export interface IDishMenuContentProps {
     menu?: MenuCategory

@@ -1,5 +1,5 @@
-import styled from "styled-components";
+import styled from "@/utils/styled";
 
-export const Block = styled('div')({
+export const Block = styled.div({
     padding: '50px 0 0 0'
 })

@@ -1,7 +1,7 @@
 import { Breakpoints } from "@/constants/breakpoints";
 import {CLR_WHITE} from "../../constants";
-import styled from "styled-components";
 import { Typography } from "./Typography";
+import styled from "@/utils/styled";
 
 export interface IDishMenuElementProps {
     name: string;

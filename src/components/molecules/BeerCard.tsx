@@ -1,5 +1,4 @@
-import {FeatureCard} from "@components/atoms";
-import url from '@assets/beer.jpg'
+import {FeatureCard} from "@/components/atoms";
 
 export interface IBearCardProps {
     minPrice?: number;
@@ -7,5 +6,5 @@ export interface IBearCardProps {
 export const BeerCard = ({minPrice}: IBearCardProps) => <FeatureCard
     title='🍺ПИВО🍻'
     subtitle={`от ${minPrice || '- '}֏`}
-    imgSrc={url}
+    imgSrc={'/beer.jpg'}
 />

@@ -1,10 +1,11 @@
-import styled from "styled-components";
-import {Typography} from "@components/atoms";
-import {CLR_WHITE} from "@src/constants";
-import {useJson} from "@src/utils/useJson";
-import {Link, useParams} from "react-router-dom";
-import {DishMenuCategories} from "@components/organizms/DishMenuCategories.tsx";
-import {DishMenuContent} from "@components/organizms/DishMenuContent.tsx";
+// TODO: routing
+
+import {Typography} from "@/components/atoms";
+import {CLR_WHITE} from "@/constants";
+import {useJson} from "@/utils/styled/useJson";
+import {DishMenuCategories} from "@/components/organizms/DishMenuCategories.tsx";
+import {DishMenuContent} from "@/components/organizms/DishMenuContent.tsx";
+import styled from "@/utils/styled";
 
 const DishMenuWrapper = styled.div({
     minWidth: '100%',
@@ -38,10 +39,10 @@ const HeaderWrapper = styled.div({
 
 export const DishMenu = () => {
     const response = useJson()
-    const {id} = useParams<{ id: string }>()
+    // const {id} = useParams<{ id: string }>()
     const category = response?.menu?.find(category => category.id === id)
     return <DishMenuWrapper>
-        <HeaderWrapper>
+        {/* <HeaderWrapper>
         <Typography bold textAlign='center' size={40} color={CLR_WHITE}>
             {!id ? <><Link to='/'>⇦</Link> МЕНЮ</> : <><Link to='/menu'>⇦</Link> {category?.category}</>}
         </Typography>
@@ -49,6 +50,6 @@ export const DishMenu = () => {
         <ContentWrapper>
             {!id ? <DishMenuCategories categories={response?.menu}/> :
                 <DishMenuContent menu={category}/>}
-        </ContentWrapper>
+        </ContentWrapper> */}
     </DishMenuWrapper>
 }

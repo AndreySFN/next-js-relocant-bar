@@ -1,9 +1,6 @@
 import {Block, Typography} from "@/components/atoms";
-import styled from "styled-components";
+import styled from "@/utils/styled";
 import {YandexMap} from "@/components/widgets";
-import {IMobileProps} from "@/types";
-import TgLogo from '@assets/social-media/telegram.svg'
-import InstLogo from '@assets/social-media/instagram.svg'
 import {SocialMediaButton} from "@/components/molecules/SocialMediaButton";
 import {INSTAGRAM_URL, TG_CHANEL_URL} from "@/constants";
 import { Breakpoints } from "@/constants/breakpoints";
@@ -48,8 +45,8 @@ export const Contacts = () => {
                     <h2>А ещё мы есть в соцсетях и будем рады вашей подписке :)</h2>
                 </Block>
                 <SocialMediaContainer>
-                    <SocialMediaButton href={TG_CHANEL_URL} width={'150px'} height='60%' src={TgLogo}/> {/*TODO: Refactoring*/}
-                    <SocialMediaButton href={INSTAGRAM_URL} width={'150px'}  height='60%' src={InstLogo}/>
+                    <SocialMediaButton href={TG_CHANEL_URL} width={'150px'} height='60%' src={'/social-media/telegram.svg'}/> {/*TODO: Refactoring*/}
+                    <SocialMediaButton href={INSTAGRAM_URL} width={'150px'}  height='60%' src={'/social-media/instagram.svg'}/>
                 </SocialMediaContainer>
             </ContactsContainer>
             <YandexMap/>
