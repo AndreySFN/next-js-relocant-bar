@@ -17,7 +17,7 @@ const DishMenuContentWrapper = styled.div({
 export const DishMenuContent = ({menu}: IDishMenuContentProps) => {
     return <DishMenuContentWrapper>
         {menu?.products?.map(product =>
-            <DishMenuElement description={product.description} name={product.name} price={product.price}/>
+            <DishMenuElement description={product.description} key={product.id} name={product.name} price={product.price}/>
         )}
     </DishMenuContentWrapper>
 }

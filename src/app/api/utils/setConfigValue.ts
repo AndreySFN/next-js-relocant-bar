@@ -13,14 +13,30 @@ async function streamToString(stream: ReadableStream): Promise<string> {
   return result;
 }
 
+
+async function readConfig() {
+  try {
+      const data = await fs.readFile(CONFIG_PATH, 'utf8');
+      return JSON.parse(data);
+  } catch (error) {
+      if (error.code === 'ENOENT') { // Проверка на отсутствие файла
+          console.log(`Файл ${CONFIG_PATH} не найден. Создаем новый файл.`);
+          await fs.writeFile(CONFIG_PATH, '{}'); // Создаем новый файл
+          return {}; // Возвращаем пустой объект
+      } else {
+          throw error; // Если произошла другая ошибка, выбрасываем ее
+      }
+  }
+}
+
 export const createSetConfigValue = (fieldName: string) => async (request: Request) => {
   if (!request.body) {
     return new Response('Цена не была передана на сервер', { status: 400 });
   }
   const newValue = await streamToString(request.body);
   try {
-    const data = await fs.readFile(CONFIG_PATH, 'utf8');
-    const config = JSON.parse(data);
+    const data = await readConfig();
+    const config = data;
 
     config[fieldName] = newValue;
 
