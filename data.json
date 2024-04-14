@@ -1,4 +1,4 @@
 {
-  "beerMinPrice": "123222222222",
-  "tinctureMinPrice": "boba"
+  "beerMinPrice": 800,
+  "tinctureMinPrice": 1200
 }
