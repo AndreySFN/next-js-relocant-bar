@@ -3,26 +3,36 @@ import { Features } from "@/components/organizms/Features";
 import { Contacts } from "@/components/organizms/Contacts";
 import { FeaturesList } from "@/components/organizms/FeaturesList";
 import { getData } from "@/utils/getData";
+import { HeaderBanner } from "@/components/molecules";
+import { LegalInformation } from "@/components/organizms";
+import styled from "@/utils/styled";
 
-// export async function fetchData() {
-//   try {
-//     const response = await fetch(`${process.env.BASE_URL}/api/data`, {cache: 'no-cache'});
-//     return await response.json();
-//   } catch (error) {
-//     console.error('Failed to fetch data:', error);
-//     return {};
-//   }
-// }
+
+const MainContainer = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  paddingBottom: '20px'
+})
+
+const Content = styled.div({
+  padding: '0 5%',
+  width: '100%'
+})
 
 export default async function Home() {
   const data = await getData()
-  // const data = await fetchData();
-  console.log(data)
   return (
     <>
-      <FeaturesList />
-      <Features response={data} />
-      <Contacts />
+      <MainContainer>
+        <HeaderBanner />
+        <Content>
+          <FeaturesList />
+          <Features response={data} />
+          <Contacts />
+        </Content>
+        <LegalInformation />
+      </MainContainer>
     </>
   );
 }

@@ -1,4 +1,328 @@
 {
   "beerMinPrice": 800,
-  "tinctureMinPrice": 1200
+  "tinctureMinPrice": 1200,
+  "menu": [
+    {
+      "id": "1",
+      "category": "Пивко",
+      "products": [
+        {
+          "name": "Сидр разливной \"Dargett\"",
+          "description": "0.5 л.",
+          "price": 2500
+        },
+        {
+          "name": "Пиво разливное \"Dilijan\"",
+          "description": "0.5 л.",
+          "price": 800
+        },
+        {
+          "name": "Пиво \"Dilijan\"",
+          "description": "0.33 л.",
+          "price": 600
+        },
+        {
+          "name": "Пиво \"Stella Artois\" (Бельгия)",
+          "description": "0.33 л.",
+          "price": 1300
+        },
+        {
+          "name": "Пиво \"Dargett\" в ассорт.",
+          "description": "0.33 л.",
+          "price": 1300
+        },
+        {
+          "name": "Волковская пивоварня в ассорт.",
+          "description": "0.45 л.",
+          "price": 1900
+        },
+        {
+          "name": "Пиво безалк. заводское в ассорт.",
+          "description": "0.45 л.",
+          "price": 1400
+        },
+        {
+          "name": "Пиво безалк. крафтовое в ассорт.",
+          "description": "0.45 л.",
+          "price": 2500
+        },
+        {
+          "name": "Пиво крафтовое импорт. в ассорт.",
+          "price": "1900-5000"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "category": "Безалкогольные напитки",
+      "products": [
+        {
+          "name": "Кока-Кола",
+          "description": "0.25 л.",
+          "price": 600
+        },
+        {
+          "name": "Соки в ассорт.",
+          "description": "0.2 л.",
+          "price": 600
+        },
+        {
+          "name": "Чай в ассорт.",
+          "description": "0.5 л.",
+          "price": 800
+        },
+        {
+          "name": "Тоник \"Schweppes\" ",
+          "description": "0.2 л.",
+          "price": 800
+        },
+        {
+          "name": "Энергетик \"Red Bull\" ",
+          "price": 1500
+        },
+        {
+          "name": "Молочный коктейль в ассорт.",
+          "description": "0.3 л.",
+          "price": 1500
+        },
+        {
+          "name": "Кофе по-восточному (чёрный)",
+          "price": 800
+        },
+        {
+          "name": "Кофе по-венски (с молоком)",
+          "price": 800
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "category": "Закуски",
+      "products": [
+        {
+          "name": "Арахис",
+          "description": "100 гр.",
+          "price": 1000
+        },
+        {
+          "name": "Чипсы \"Lays\"",
+          "description": "70 гр.",
+          "price": 1500
+        },
+        {
+          "name": "Пельмени",
+          "description": "300 гр.",
+          "price": 2000
+        },
+        {
+          "name": "Хинкали ",
+          "description": "1 шт. ",
+          "price": 300
+        },
+        {
+          "name": "Маринованные яйца",
+          "description": "2 шт.",
+          "price": 1350
+        },
+        {
+          "name": "Сэндвич английский",
+          "price": 1350
+        },
+        {
+          "name": "Клаб сэндвич",
+          "price": 2150
+        },
+        {
+          "name": "Сэндвич с тунцом",
+          "price": 2150
+        },
+        {
+          "name": "Растегай с форелью",
+          "price": 2150
+        },
+        {
+          "name": "Хачапури по-аджарски",
+          "price": 1350
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "category": "Крепкие напитки",
+      "products": [
+        {
+          "name": "Виски \"Jameson\"",
+          "description": "50 мл.",
+          "price": 2400
+        },
+        {
+          "name": "Джин \"Barrister\"",
+          "description": "50 мл.",
+          "price": 1500
+        },
+        {
+          "name": "Водка \"Архангельская\"",
+          "description": "50 мл.",
+          "price": 1500
+        },
+        {
+          "name": "Самбука \"Borghetti\"",
+          "description": "50 мл.",
+          "price": 2200
+        },
+        {
+          "name": "Текила \"Olmeca\"",
+          "description": "50 мл.",
+          "price": 2600
+        },
+        {
+          "name": "Ром \"Angostura\"",
+          "description": "50 мл.",
+          "price": 2400
+        },
+        {
+          "name": " Ликёр \"Jagermeister\"",
+          "description": "50 мл.",
+          "price": 1800
+        },
+        {
+          "name": " Ликёр \"Dekuyper\" мятный",
+          "description": "50 мл.",
+          "price": 2400
+        },
+        {
+          "name": " Ликёр \"400 Rabbits\" Limoncello",
+          "description": "50 мл.",
+          "price": 2400
+        },
+        {
+          "name": " Ликёр \"400 Rabbits\" Coffee",
+          "description": "50 мл.",
+          "price": 1200
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "category": "Вино",
+      "products": [
+        {
+          "name": "Вино \"Армения\"",
+          "description": "150 мл.",
+          "price": 1500
+        },
+        {
+          "name": "Вино \"Yerevak\"",
+          "description": "150 мл.",
+          "price": 2300
+        },
+        {
+          "name": "Вермут \"Carpano\" сухой",
+          "description": "50 мл.",
+          "price": 1500
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "category": "Коктейли",
+      "products": [
+        {
+          "name": "Водка-энергетик",
+          "price": 1600
+        },
+        {
+          "name": "Джин-Тоник",
+          "price": 1700
+        },
+        {
+          "name": "Виски-Кола",
+          "price": 2700
+        },
+        {
+          "name": "Отвёртка",
+          "price": 1600
+        },
+        {
+          "name": "Белый Русский",
+          "price": 1800
+        },
+        {
+          "name": "Виски Сауэр",
+          "price": 2700
+        },
+        {
+          "name": "Текила Санрайз",
+          "price": 2900
+        },
+        {
+          "name": "Френч 75",
+          "price": 3500
+        },
+        {
+          "name": "Дайкири",
+          "price": 3500
+        },
+        {
+          "name": "Маргарита",
+          "price": 3700
+        },
+        {
+          "name": "Белая Леди",
+          "price": 2900
+        },
+        {
+          "name": "Куба Либре",
+          "price": 3500
+        },
+        {
+          "name": "Апероль Шпритц",
+          "price": 3700
+        },
+        {
+          "name": "Лонг Айленд ",
+          "price": 3700
+        },
+        {
+          "name": "Ягер Бомба",
+          "price": 3500
+        },
+        {
+          "name": "Голубая Лагуна",
+          "price": 3700
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "category": "Шоты",
+      "products": [
+        {
+          "name": "Боярский",
+          "price": 1700
+        },
+        {
+          "name": "Храбрый Буян",
+          "price": 2900
+        },
+        {
+          "name": "Дочь Боярская",
+          "price": 2200
+        },
+        {
+          "name": "Рыжая Собака",
+          "price": 2900
+        },
+        {
+          "name": "Амигос",
+          "price": 2900
+        },
+        {
+          "name": "Special",
+          "price": "от 1700",
+          "description": "утончайте у бармена"
+        }
+      ]
+    }
+  ]
 }
