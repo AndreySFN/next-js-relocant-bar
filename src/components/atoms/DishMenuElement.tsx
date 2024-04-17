@@ -1,11 +1,11 @@
 import { Breakpoints } from "@/constants/breakpoints";
-import {CLR_WHITE} from "../../constants";
+import { CLR_WHITE } from "../../constants";
 import { Typography } from "./Typography";
 import styled from "@/utils/styled";
 
 export interface IDishMenuElementProps {
     name: string;
-    description: string;
+    description?: string;
     price: number;
 }
 
@@ -24,16 +24,16 @@ const DishPriceWrapper = styled.div({
     minWidth: 'fit-content',
 })
 
-const DotWrapper = styled.div`
-  flex-grow: 1;
-  border-bottom: 4px dotted white;
-  position: relative;
-  bottom: 4px;
-`;
+const DotWrapper = styled.div({
+    flexGrow: 1,
+    borderBottom: '4px dotted white',
+    position: 'relative',
+    bottom: '4px',
+})
 
-export const DishMenuElement = ({description, price, name}: IDishMenuElementProps) => {
+export const DishMenuElement = ({ description, price, name }: IDishMenuElementProps) => {
     return <DishMenuElementWrapper>
-        <div style={{alignSelf: 'end'}}>
+        <div style={{ alignSelf: 'end' }}>
             <div>
                 <Typography textAlign='center' size={32} color={CLR_WHITE}>
                     {name}
@@ -45,7 +45,7 @@ export const DishMenuElement = ({description, price, name}: IDishMenuElementProp
                 </Typography>
             </div>}
         </div>
-        <DotWrapper/>
+        <DotWrapper />
         <DishPriceWrapper>
             <Typography textAlign='center' size={24} color={CLR_WHITE}>
                 {price} ֏

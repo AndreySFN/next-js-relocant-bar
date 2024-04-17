@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "set BASE_URL=localhost:4000 && next dev",
+    "dev": "next dev",
     "build": "rm -rf ./.next && next build",
     "build:prod": "rm -rf ./.next && NODE_ENV=production next build",
     "build:start": "rm -rf ./.next && next build && next start",
@@ -16,8 +16,7 @@
     "next": "14.1.4",
     "object-hash": "^3.0.0",
     "react": "^18",
-    "react-dom": "^18",
-    "styled-components": "^6.1.8"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
