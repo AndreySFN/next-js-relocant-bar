@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import './reset.css'
 import './main.css'
-import { IWithCildren } from "./types";
+import { IWithCildren } from "../types";
+import dotenv from "dotenv";
+
+dotenv.config()
+
 const inter = Raleway({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
