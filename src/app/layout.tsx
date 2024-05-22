@@ -8,6 +8,7 @@ const inter = Raleway({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Релокант - бар с русским акцентом",
   description: "Релокант - бар с русским акцентом",
+  icons: ['/favicon.png'],
 };
 
 export default function RootLayout({
