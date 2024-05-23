@@ -13,7 +13,6 @@ interface IProps {
 const DishMenuContentWrapper = styled.div({
     display: 'flex',
     maxWidth: '100%',
-    flexBasis: '50%',
     flexWrap: 'wrap',
     gap: '20px',
     justifyContent: 'center'

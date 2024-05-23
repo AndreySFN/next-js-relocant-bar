@@ -9,47 +9,38 @@ export interface IDishMenuElementProps {
     price: number;
 }
 
-const DishMenuElementWrapper = styled.div({
-    width: '40%',
-    display: 'flex',
-    [Breakpoints.TABLET]: {
-        width: '100%'
-    }
+const DishElementWrapper = styled.div({
+    fontSize: '32px',
+    color: 'white',
+    minWidth: '45%',
+    flexBasis: '100%',
 })
 
-const DishPriceWrapper = styled.div({
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'end',
-    minWidth: 'fit-content',
+const DotPriceWrapper = styled.div({
+    display: 'flex'
 })
 
-const DotWrapper = styled.div({
-    flexGrow: 1,
-    borderBottom: '4px dotted white',
-    position: 'relative',
-    bottom: '4px',
+const Dots = styled.div({
+    flex: 1,
+    borderBottom: '2px dotted white',
+    minWidth: '40px'
+})
+
+const Description = styled.div({
+    fontSize: '16px'
 })
 
 export const DishMenuElement = ({ description, price, name }: IDishMenuElementProps) => {
-    return <DishMenuElementWrapper>
-        <div style={{ alignSelf: 'end' }}>
-            <div>
-                <Typography textAlign='center' size={32} color={CLR_WHITE}>
-                    {name}
-                </Typography>
-            </div>
-            {description && <div>
-                <Typography textAlign='center' size={20} italic color={CLR_WHITE}>
-                    {description}
-                </Typography>
-            </div>}
+    return <DishElementWrapper>
+    <DotPriceWrapper>
+        <div>
+            {name}
         </div>
-        <DotWrapper />
-        <DishPriceWrapper>
-            <Typography textAlign='center' size={24} color={CLR_WHITE}>
-                {price} ֏
-            </Typography>
-        </DishPriceWrapper>
-    </DishMenuElementWrapper>
+        <Dots />
+        <div>
+            {price}
+        </div>
+    </DotPriceWrapper>
+    {description && <Description>{description}</Description>}
+    </DishElementWrapper>
 }
